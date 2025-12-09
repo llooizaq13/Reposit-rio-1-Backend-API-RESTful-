@@ -1,18 +1,32 @@
 {
-  "name": "reposit-rio-1-backend-api-restful-",
+  "name": "pokemon-backend",
   "version": "1.0.0",
-  "description": "Este repositório contém a API RESTful desenvolvida em Node.js e Express. Ela simula um banco de dados in-memory para gerenciar as operações CRUD (Criar, Ler, Atualizar, Deletar) da entidade 'Pokémon Capturado', incluindo nome, tipo, nível, URL da imagem e 6 estatísticas detalhadas.",
-  "main": "server.js",
+  "description": "Backend CRUD para Pokémons (Express + Prisma + MySQL)",
+  "main": "dist/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "prisma:generate": "prisma generate",
+    "prisma:migrate": "prisma migrate dev --name init",
+    "prisma:studio": "prisma studio",
+    "seed": "ts-node prisma/seed.ts"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Luiza Cavalcanti",
+  "license": "MIT",
   "dependencies": {
-    "body-parser": "^2.2.1",
+    "@prisma/client": "^5.0.0",
     "cors": "^2.8.5",
-    "express": "^5.2.1"
+    "dotenv": "^16.0.0",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/node": "^24.10.2",
+    "prisma": "^5.0.0",
+    "ts-node": "^10.9.1",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.0.0"
   }
 }
