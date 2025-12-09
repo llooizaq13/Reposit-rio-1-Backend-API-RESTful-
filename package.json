@@ -1,0 +1,18 @@
+{
+  "name": "reposit-rio-1-backend-api-restful-",
+  "version": "1.0.0",
+  "description": "Este repositório contém a API RESTful desenvolvida em Node.js e Express. Ela simula um banco de dados in-memory para gerenciar as operações CRUD (Criar, Ler, Atualizar, Deletar) da entidade 'Pokémon Capturado', incluindo nome, tipo, nível, URL da imagem e 6 estatísticas detalhadas.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^2.2.1",
+    "cors": "^2.8.5",
+    "express": "^5.2.1"
+  }
+}
